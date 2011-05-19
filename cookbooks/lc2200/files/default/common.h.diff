@@ -1,0 +1,17 @@
+--- common.h	2011-05-18 23:21:19.773231476 +0200
++++ common.h.fixed	2011-05-18 23:21:06.313479282 +0200
+@@ -817,11 +817,11 @@
+     bool endsWith(const char *s, size_t l) const;
+     
+     /* TODO: Evil casting... */
+-    char* find(char c) const
++    const char* find(char c) const
+      { return strchr(mArray.begin(), c); }
+-    char* findr(char c) const
++    const char* findr(char c) const
+      { return strrchr(mArray.begin(), c); }
+-    char* find(const char* s) const 
++    const char* find(const char* s) const 
+      { return strstr(mArray.begin(), s); }
+     
+     String padLeft(char padChar, size_t len) const;
